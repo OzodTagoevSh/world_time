@@ -8,13 +8,26 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
+
+  void getData() {
+    Future.delayed(Duration(seconds: 3), () {
+      print('hello');
+    });
+  }
+
+  void initState() {
+    super.initState();
+    getData();
+  }
+
   @override
   Widget build(BuildContext context) {
+    print('build');
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         backgroundColor: Colors.blue[900],
-        title: Text('Choose Location'),
+        title: Text('Choose a Location'),
         centerTitle: true,
         elevation: 0.0,
       ),
